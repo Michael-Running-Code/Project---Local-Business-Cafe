@@ -1,0 +1,50 @@
+/* style.css – your café styles */
+
+:root {
+  --color-primary:   #6F4E37;   /* coffee brown */
+  --color-secondary: #D4A373;   /* warm beige */
+  --color-light:     #F5F5F5;   /* background/off-white */
+  --color-text:      #333333;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--color-light);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+/* Add your other styles below */
