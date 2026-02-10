@@ -47,4 +47,9 @@ nav a:focus {
   border-radius: 4px;
 }
 
-/* Add your other styles below */
+.hero-image {
+  background-image: url(../images/hero-coffee.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
