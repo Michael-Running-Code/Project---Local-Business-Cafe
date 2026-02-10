@@ -47,10 +47,38 @@ nav a:focus {
   border-radius: 4px;
 }
 
-.hero, .hero-section, body {  /* target the right element — adjust selector */
-  background-image: url("./assets/images/hero-coffee.jpg");
+.hero {
+  position: relative;
+  background-image: url("https://michael-running-code.github.io/Project-Local-Business-Cafe/assets/images/hero-coffee.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;   /* important for visibility */
+  min-height: 100vh;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.title-wrapper {
+  margin-bottom: 1rem;          /* space between title & subtitle */
+}
+
+.title-wrapper h1 {
+  font-family: 'Playfair Display', serif;  /* example elegant font */
+  font-size: 4.5rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subtitle-wrapper p {
+  font-family: 'Roboto', sans-serif;       /* example clean font */
+  font-size: 1.6rem;
+  margin: 0;
+  letter-spacing: 1px;
 }
