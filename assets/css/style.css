@@ -11,6 +11,7 @@ body {
   font-family: system-ui, sans-serif;
   background: var(--color-light);
   color: var(--color-text);
+  padding-top: 80px;
 }
 
 .container {
@@ -20,9 +21,15 @@ body {
 }
 
 header {
+  position: fixed;          /* or use sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;           /* stay on top of other content */
   background: var(--color-primary);
   color: white;
   padding: 1rem 0;
+  transition: all 0.3s;     /* optional smooth effect */
 }
 
 .logo {
@@ -125,4 +132,62 @@ nav a:focus {
 
 .select-coffee-container.reverse {
   flex-direction: row-reverse;
+}
+
+footer {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav li a:hover,
+nav li a:focus {
+  color: var(--color-secondary);
+  color: #333;          /* dark text for contrast */
+  border-radius: 4px;
+}
+
+.about {
+  position: relative;
+  background-image: url("https://michael-running-code.github.io/Project-Local-Business-Cafe/assets/images/About.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.about-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
