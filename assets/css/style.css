@@ -82,3 +82,10 @@ nav a:focus {
   margin: 0;
   letter-spacing: 1px;
 }
+
+.select-coffee {
+  position:relative;
+  top: 50px;
+  left: 50px;
+  width: 100%;
+}
