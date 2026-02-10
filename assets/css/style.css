@@ -47,9 +47,10 @@ nav a:focus {
   border-radius: 4px;
 }
 
-.hero-image {
-  background-image: url(../images/hero-coffee.jpg);
+.hero, .hero-section, body {  /* target the right element — adjust selector */
+  background-image: url("./assets/images/hero-coffee.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;   /* important for visibility */
 }
