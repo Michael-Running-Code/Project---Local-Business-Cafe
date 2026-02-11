@@ -30,6 +30,16 @@
     </header>
 
     <main id="main-content">
+        <div class="about">
+            <div class="hero-content">
+                <div class="title-wrapper">
+                    <h1>About</h1>
+                </div>
+                <div class="subtitle-wrapper">
+                    <p>Our local story</p>
+                </div>
+            </div>
+        </div>
         <section class="staff-carousel">
             <div class="staff-container active">
                 <div class="staff-photo">
@@ -38,9 +48,9 @@
                 </div>
                 <div class="staff-info">
                     <h3>Sue</h3>
-                    <p class="role">Owner</p>
-                    <p>Local girl, 5+ years crafting perfect lattes. Loves single-origin espressos and chatting with
-                        morning regulars.</p>
+                    <p class="role">Owner & Head Barista</p>
+                    <p>Local girl with over 5 years of experience. Passionate about single-origin espressos and
+                        making every morning customer feel at home.</p>
                 </div>
             </div>
 
@@ -51,8 +61,9 @@
                 </div>
                 <div class="staff-info">
                     <h3>Ben</h3>
-                    <p class="role">Owner</p>
-                    <p>France , love expresso , love baking , consicoo </p>
+                    <p class="role">Co-owner & Baker</p>
+                    <p>From France. Loves strong espresso, perfect croissants, and experimenting with new baking recipes
+                        every week. </p>
                 </div>
             </div>
 
@@ -62,9 +73,10 @@
                         alt="potato">
                 </div>
                 <div class="staff-info">
-                    <h3>potato</h3>
-                    <p class="role">potato</p>
-                    <p>A cafe ambrassor, always stay in store, stay quiet and get along with people, share warm and simile! Hope everybody can pay it a "pet tax"!</p>
+                    <h3>Potato</h3>
+                    <p class="role">Resident Café Ambassador</p>
+                    <p>Our quiet golden friend. Always in the shop, spreading calm vibes and collecting pets & smiles.
+                        Please pay the pet tax!</p>
                 </div>
             </div>
 
@@ -75,23 +87,23 @@
         </section>
 
         <script>
-            const containers = document.querySelectorAll('.staff=container');
+            const containers = document.querySelectorAll('.staff-container');
             const leftBtn = document.querySelector('.arrow.left');
             const rightBtn = document.querySelector('.arrow.right');
-            let current = 0; 
+            let current = 0;
 
-            function show(index){
-                containers.forEach(c=>c.classList.remove("active"));
+            function show(index) {
+                containers.forEach(c => c.classList.remove("active"));
                 containers[index].classList.add('active')
             }
 
-            leftBtn.addEventListener('click',()=>{
-                current=(current-1 + containers.length)%containers.legnth;
+            leftBtn.addEventListener('click', () => {
+                current = (current - 1 + containers.length) % containers.length;
                 show(current);
             })
 
-            rightBtn.addEventListener('click', ()=>{
-                current=(current +1)%containers.length;
+            rightBtn.addEventListener('click', () => {
+                current = (current + 1) % containers.length;
                 show(current);
             }
             )
