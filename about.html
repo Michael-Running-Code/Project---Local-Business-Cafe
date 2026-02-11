@@ -16,34 +16,88 @@
     <header>
         <div class="container">
             <div class="nav-wrapper">
-               <h1 class="logo"> Good Cafe</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav> 
+                <h1 class="logo"> Good Cafe</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <div class="about">
-            <div class="about-content">
-                <div class="title-wrapper">
-                    <h1>Enjoy my Time</h1>
+        <section class="staff-carousel">
+            <div class="staff-container active">
+                <div class="staff-photo">
+                    <img src="https://michael-running-code.github.io/Project-Local-Business-Cafe/assets/images/sue.jpg"
+                        alt="sue">
                 </div>
-                <div class="subtitle-wrapper">
-                    <p>Fresh coffee • Delicious snacks • Warm welcome</p>
+                <div class="staff-info">
+                    <h3>Sue</h3>
+                    <p class="role">Owner</p>
+                    <p>Local girl, 5+ years crafting perfect lattes. Loves single-origin espressos and chatting with
+                        morning regulars.</p>
                 </div>
             </div>
-        </div>
 
-        <section class="content-section">
-            
+            <div class="staff-container">
+                <div class="staff-photo">
+                    <img src="https://michael-running-code.github.io/Project-Local-Business-Cafe/assets/images/Ben.jpg"
+                        alt="Ben">
+                </div>
+                <div class="staff-info">
+                    <h3>Ben</h3>
+                    <p class="role">Owner</p>
+                    <p>France , love expresso , love baking , consicoo </p>
+                </div>
+            </div>
+
+            <div class="staff-container">
+                <div class="staff-photo">
+                    <img src="https://michael-running-code.github.io/Project-Local-Business-Cafe/assets/images/potato.jpg"
+                        alt="potato">
+                </div>
+                <div class="staff-info">
+                    <h3>potato</h3>
+                    <p class="role">potato</p>
+                    <p>A cafe ambrassor, always stay in store, stay quiet and get along with people, share warm and simile! Hope everybody can pay it a "pet tax"!</p>
+                </div>
+            </div>
+
+            <button class="arrow left">&lt;</button>
+            <button class="arrow right">&gt;</button>
+
+
         </section>
+
+        <script>
+            const containers = document.querySelectorAll('.staff=container');
+            const leftBtn = document.querySelector('.arrow.left');
+            const rightBtn = document.querySelector('.arrow.right');
+            let current = 0; 
+
+            function show(index){
+                containers.forEach(c=>c.classList.remove("active"));
+                containers[index].classList.add('active')
+            }
+
+            leftBtn.addEventListener('click',()=>{
+                current=(current-1 + containers.length)%containers.legnth;
+                show(current);
+            })
+
+            rightBtn.addEventListener('click', ()=>{
+                current=(current +1)%containers.length;
+                show(current);
+            }
+            )
+
+
+        </script>
 
 
 
