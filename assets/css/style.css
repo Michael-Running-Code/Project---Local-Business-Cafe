@@ -134,8 +134,10 @@ nav a:focus {
   }
 }
 
+.select-coffee-container,
 .select-coffee-container.reverse {
-  flex-direction: row-reverse;
+  flex-direction: column;
+  gap: 40px;
 }
 
 footer {
@@ -399,6 +401,12 @@ nav li a:focus {
 }
 
 @media (max-width: 768px) {
+  .select-coffee-container,
+  .select-coffee-container.reverse {
+    flex-direction: column !important;
+    gap: 40px;
+    padding: 40px 20px;
+  }
   .hamburger {
     display: block; /* Show on mobile */
   }
@@ -426,5 +434,27 @@ nav li a:focus {
     display: block; /* Show close on mobile */
     text-align: right;
     padding: 0.5rem 1rem;
+  }
+  .staff-container {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .staff-photo img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .staff-info {
+    width: 100%;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
   }
 }

@@ -16,8 +16,10 @@
     <header>
         <div class="container">
             <div class="nav-wrapper">
-                <h1 class="logo"> Good Cafe</h1>
+                <h1 class="logo">Good Cafe</h1>
+                <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
                 <nav>
+                    <button class="close-menu" aria-label="Close menu">&lt;&lt;</button>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -58,6 +60,15 @@
             <p>&copy; 2025 Café Name. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        const close = document.querySelector('.close-menu');
+
+        hamburger.addEventListener('click', () => nav.classList.add('open'));
+        close.addEventListener('click', () => nav.classList.remove('open'));
+    </script>
 
 </body>
 
