@@ -44,8 +44,8 @@
         <section class="menu-section">
             <div class="filters">
                 <button data-filter="all">All</button>
-                <button data-filter="veg">Vegetarian</button>
-                <button data-filter="gf">Gluten-Free</button>
+                <button data-filter="Bake">Bake</button>
+                <button data-filter="Drink">Drink</button>
             </div>
 
             <div class="menu-grid">
@@ -150,6 +150,19 @@
             <p>&copy; 2025 Café Name. All rights reserved.</p>
         </div>
     </footer>
+
+
+    <script>
+        document.querySelectorAll(".filters button").forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.item').forEach(item => {
+                    const category = item.dataset.category;
+                    item.style.display = (filter === "all" || filter === category) ? "flex" : "none";
+                });
+            });
+        });
+    </script>
 
 </body>
 
