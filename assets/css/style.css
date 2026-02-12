@@ -371,3 +371,16 @@ nav li a:focus {
   color: white;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
+
+.map-container {
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-information{
+  margin-top: 20px;
+  text-align: center;
+}
