@@ -118,6 +118,10 @@ nav a:focus {
   max-width: 50%;
 }
 
+.select-coffee-container.reverse {
+  flex-direction: column-reverse;
+}
+
 @media (max-width: 768px) {
   .select-coffee-container {
     flex-direction: column;
@@ -383,4 +387,44 @@ nav li a:focus {
 .contact-information{
   margin-top: 20px;
   text-align: center;
+}
+
+.hamburger, .close-menu {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show on mobile */
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-primary);
+    display: none; /* Hidden by default */
+  }
+
+  nav.open {
+    display: block; /* Show when open */
+  }
+
+  nav ul {
+    flex-direction: column; /* Vertical */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .close-menu {
+    display: block; /* Show close on mobile */
+    text-align: right;
+    padding: 0.5rem 1rem;
+  }
 }
