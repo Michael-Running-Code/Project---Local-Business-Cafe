@@ -201,6 +201,7 @@ nav li a:focus {
   max-width: 900px;
   margin: 2rem auto;
   overflow: hidden;
+  padding: 0 80px;
 }
 
 .staff-container {
@@ -253,8 +254,8 @@ nav li a:focus {
   cursor: pointer;
 }
 
-.left  { left: 10px; }
-.right { right: 10px; }
+.left  { left: 0; }
+.right { right: 0; }
 
 .arrow:hover { background: #6F4E37; }
 
@@ -494,3 +495,4 @@ nav li a:focus {
 .contact-form button:hover {
   background: var(--color-secondary);
 }
+
