@@ -19,19 +19,6 @@ A cozy local café website project.
 ## Live Demo
 https://michael-running-code.github.io/Project-Local-Business-Cafe/
 
-## Folder Structure
-Project-Local-Business-Cafe/
-├── assets/
-│   ├── css/
-│   │   ├── reset.css
-│   │   └── style.css
-│   └── images/
-├── index.html
-├── about.html
-├── menu.html
-├── contact.html
-└── README.md
-
 
 ## How to run locally
 1. Clone the repo  
